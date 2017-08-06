@@ -4,7 +4,7 @@ describe('Module: junkComponent', function () {
   var scope, $sandbox, $compile, $timeout;
 
   // load the controller's module
-  beforeEach(module('pastac-example-component'));
+  beforeEach(module('pastac-admin-users'));
 
   beforeEach(module('myTemplates'));
 
@@ -24,7 +24,7 @@ describe('Module: junkComponent', function () {
   var templates = {
     'default': {
       scope: {},
-      element: '<pastac-example-component></pastac-example-component>'
+      element: '<pastac-admin-users></pastac-admin-users>'
     }
   };
 

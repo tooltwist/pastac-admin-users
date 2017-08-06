@@ -4,13 +4,13 @@
 // See https://stackoverflow.com/questions/21103724/angular-directive-templateurl-relative-to-js-file
 var pastacalExampleComponent_scripts = document.getElementsByTagName("script")
 var pastacalExampleComponent_currentScriptPath = pastacalExampleComponent_scripts[pastacalExampleComponent_scripts.length-1].src;
-var pastacalExampleComponent_templateUrl = pastacalExampleComponent_currentScriptPath.replace('/pastac-example-component.js', '/pastac-example-component.html');
+var pastacalExampleComponent_templateUrl = pastacalExampleComponent_currentScriptPath.replace('/pastac-admin-users.js', '/pastac-admin-users.html');
 
 
-angular.module('pastac-example-component', [])
+angular.module('pastac-admin-users', [])
 
-.component('pastacExampleComponent', {
-  controller: PastacExampleComponentController,
+.component('pastacAdminUsers', {
+  controller: PastacAdminUsersController,
   controllerAs: 'ctrl',
   bindings: {
     // Bind parameters from the HTML element that invokes this
@@ -22,7 +22,7 @@ angular.module('pastac-example-component', [])
 });
 
 
-function PastacExampleComponentController($scope) {
+function PastacAdminUsersController($scope) {
   var ctrl = this;
 
   // Set a default name in this component

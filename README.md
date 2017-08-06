@@ -4,7 +4,7 @@ This module is treated as a standard Angular 1 component. To use it on an Angula
 1. Download the component into your project
 
     ```shell
-    $ bower install pastac-example-component --save  
+    $ bower install pastac-admin-users --save  
     ```
 
 1. Include the component in your page
@@ -13,20 +13,20 @@ This module is treated as a standard Angular 1 component. To use it on an Angula
     script(src="bower_components/jquery/dist/jquery.js" type="text/javascript")  
     script(src="bower_components/angular/angular.min.js")  
     script(src="bower_components/bootstrap/dist/js/bootstrap.js" type="text/javascript")  
-    script(src="bower_components/pastac-example-component/dist/pastac-example-component.js" type="text/javascript")  
+    script(src="bower_components/pastac-admin-users/dist/pastac-admin-users.js" type="text/javascript")  
     ```
 
 1. Use the component in your Pug files (formerly called Jade)  
 
     ```pug
-    pastac-example-component(initial-name="Turtle" on-done="sayHello(name)")  
+    pastac-admin-users(initial-name="Turtle" on-done="sayHello(name)")  
     ```
 
 
 1. Invoke the module in your Angular initialization
 
     ```javascript
-    var module = angular.module('myApp', [ 'pastac-example-component' ]);  
+    var module = angular.module('myApp', [ 'pastac-admin-users' ]);  
     ...
     ```
 
