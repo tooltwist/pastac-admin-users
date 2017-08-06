@@ -1,12 +1,13 @@
 {
   "name": "pastac-admin-users",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "dependencies": {
     "bootstrap": "^3.3.7"
   },
   "devDependencies": {
     "angular-unstable": "latest",
     "angular-mocks": "latest",
-    "jquery": "latest"
+    "jquery": "latest",
+    "pastac-login": "latest"
   }
 }

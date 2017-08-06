@@ -1,0 +1,22 @@
+
+<div class="alert alert-warning" ng-if="!ctrl._showUsers">Log in as an administrator to see user details</div>
+<table class="table table-condensed" ng-if="ctrl._showUsers">
+  <tr>
+    <th>Id</th>
+    <th>Email</th>
+    <th>Authority</th>
+    <th>Privileges</th>
+    <th>Admin</th>
+  </tr>
+  <tr ng-repeat="user in ctrl.users" ng-class="{warning: user.id==ctrl.currentUser.id}">
+    <td>{{user.id}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.authority}}</td>
+    <td>
+      <input ng-if="ctrl._editable" type="text" ng-model="user.privileges" ng-change="ctrl.onchange(user)" ng-blur="ctrl.onblur(user)" style="width:100%;"><span ng-if="!ctrl._editable">{{user.privileges}}</span>
+    </td>
+    <td>
+      <input type="checkbox" ng-checked="user.is_admin" ng-click="ctrl.toggleAdmin(user)" ng-disabled="!ctrl._editable || user.id==ctrl.currentUser.id">
+    </td>
+  </tr>
+</table>
